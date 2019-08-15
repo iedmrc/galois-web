@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Project Galois</h1>
+    <h1 align="center">Project Galois <img src="favicon-32x32.png" alt="Galois Autocompleter" style="vertical-align: top"/> </h1>
     <div id="intro">
       <p>
         <b>Galois</b> is an auto code completer for code editors (or any text editor) based on <a href="https://github.com/openai/gpt-2">OpenAI GPT-2</a>.
@@ -15,6 +15,7 @@
         The trained (finetuned) model, the autocompleter backend and this page are released under MIT license on their Github pages.
         Feel free to fork the repository on <a href="https://github.com/iedmrc/galois-autocompleter"> Github</a> or contact me on <a href="https://twitter.com/iedmrc">Twitter</a>. 
       </p>
+      <p>Try it on here: <img src="arrow.gif" width="54px" height="54px" style="vertical-align: middle" alt="arrow"/> (But please select by clicking with the mouse (or touching) due to the known bugs about `Enter` and `Tab` keys on the editor. See <a href="https://github.com/iedmrc/galois-web#known-bugs">here</a> to help me to solve these issues.)</p>
     </div>
       <prism-editor v-model="code" :emitEvents="true" language="python" :line-numbers="lineNumbers" class="editor" />
   </div>

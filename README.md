@@ -1,4 +1,4 @@
-<h1 align="center">Online Editor for Galois Autocompleter </h1>
+<h1 align="center"><img src="img/logo.png" alt="Galois Autocompleter"/><p>Online Editor for Galois Autocompleter</p></h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/iedmrc">
@@ -12,11 +12,11 @@
 
 **Galois** is an auto code completer for code editors (or any text editor) based on [OpenAI GPT-2](https://github.com/openai/gpt-2). It is trained (finetuned) on a curated list of approximately 45K Python (~470MB) files gathered from the Github. It is now just works properly on Python but not bad at other languages (thanks to GPT-2's power). 
 
-This repository contains the online code editor crafted with [vue-prism-editor](https://github.com/koca/vue-prism-editor) and [tribute](https://github.com/zurb/tribute).
+This repository contains an online code editor crafted with [vue-prism-editor](https://github.com/koca/vue-prism-editor) and [tribute](https://github.com/zurb/tribute).
 
 ## Installation
 
-You can install and run this repository with or without Docker. This repository only contains the Web API's for **Galois**. You should also need to install **Galois Autocompleter** to enjoy the autocompleter.
+You can install and run this repository with or without Docker. This repository only contains the Web API's for **Galois**. You should also need to install **Galois Autocompleter** to enjoy with the autocompleter.
 
 ### With Docker
 Either clone the repository and build the image from docker file or directly run the following command:
@@ -33,7 +33,7 @@ Clone the repository and build the vue frontend with:
 ```sh
 npm install && npm run build
 ```
-copy `dist/` directory to `backend/public`. Install modules via `npm install` (or use yarn if you prefer). Run the server via:
+Copy `dist/` directory to `backend/public`. Install modules via `npm install` (or use yarn if you prefer). Run the server via:
 ```sh
 npm run start
 ```
@@ -45,7 +45,14 @@ npm run start
 Contributions are welcome especially for the frontend side. Because I'm not good at with frontend development, any UI/UX improvements are welcome! Feel free to create an issue or a pull request.
 
 ### Known Bugs
-There are some bugs with the [vue-prism-editor](https://github.com/koca/vue-prism-editor) and [tribute](https://github.com/zurb/tribute). Because `vue-prism-editor` is just a dead simple code editor and `tribute` is not really designed for autocompletion, it is possible to face with UX issues. Look *contributions* section if you say "hey I can fix these issues!" 🙌
+
+There are some bugs with the [vue-prism-editor](https://github.com/koca/vue-prism-editor) and [tribute](https://github.com/zurb/tribute). Because `vue-prism-editor` is just a dead simple code editor and `tribute` is not really designed for autocompletion, it is possible to face with UX issues. Here is some known bugs:
+
+- Selecting an offered prediction by `Enter` or `Tab` keys breaks the editor due to "keys conflict" between `vue-prism-editor` and `tribute`.
+- `tribute` doesn't show `\n`s and other speacial characters If Galois's predictions include `\n` or another space character.
+- `tribute` doesn't trigger when the `space` key is pressed.
+
+Look *contributions* section if you say "hey I can fix these issues!" 🙌
 
 ## Author
 
