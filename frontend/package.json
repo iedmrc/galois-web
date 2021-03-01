@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "tributejs": "^3.7.1",
     "vue": "^2.6.10",
     "vue-prism-editor": "^0.2.1",
